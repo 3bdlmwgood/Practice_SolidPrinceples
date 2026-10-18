@@ -1,5 +1,6 @@
 ﻿using OCP.NotificationService;
 using SRP.Example_2;
+using OCP.PaymentService;
 
 namespace OCP
 {
@@ -37,10 +38,20 @@ namespace OCP
 
         }
 
+        static void PaymentServicce()
+        {
+            PaymentService.PaymentService payment = new PaymentService.PaymentService();
+            payment.ProcessPayment(2502.5m, PaymentService.PaymentService.enPaymentProcessor.BankTransfer);
+            payment.ProcessPayment(2502.5m, PaymentService.PaymentService.enPaymentProcessor.PayPal);
+            payment.ProcessPayment(2502.5m, PaymentService.PaymentService.enPaymentProcessor.CreditCard);
+            payment.ProcessPayment(2502.5m, PaymentService.PaymentService.enPaymentProcessor.Bitcoin);
+        }
+
         static void Main(string[] args)
         {
             //NotificationService();
-            LoggingService();
+            //LoggingService();
+            PaymentServicce();
         }
     }
 }
