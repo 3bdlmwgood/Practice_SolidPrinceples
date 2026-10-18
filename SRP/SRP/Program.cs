@@ -1,4 +1,6 @@
-﻿namespace SRP
+﻿using SRP.Example_2;
+
+namespace SRP
 {
     internal class Program
     {
@@ -20,9 +22,27 @@
             NewNotificationService.SendNotification("123-456-789", "Fax Message: Important Document", NewNotificationService.enNotificationType.Fax);
         }
 
+        static void Ex2()
+        {
+            LoggingService loggingService = new LoggingService();
+
+            loggingService.Log("Error Occured in Line 244", LoggingService.enLoggingType.ToFile);
+            loggingService.Log("Error Occured in Line 244", LoggingService.enLoggingType.ToEventLog);
+            loggingService.Log("Error Occured in Line 244", LoggingService.enLoggingType.ToDatabase);
+
+            Console.WriteLine("-------------------------------------------");
+
+            NewLoggingService NewloggingService = new NewLoggingService();
+
+            NewloggingService.Log("Error Occured in Line 244", NewLoggingService.enLoggingType.ToFile);
+            NewloggingService.Log("Error Occured in Line 244", NewLoggingService.enLoggingType.ToEventLog);
+            NewloggingService.Log("Error Occured in Line 244", NewLoggingService.enLoggingType.ToDatabase);
+        }
+
         static void Main(string[] args)
         {
-            Ex1();
+            //Ex1();
+            Ex2();
         }
     }
 }
