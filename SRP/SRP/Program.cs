@@ -3,7 +3,7 @@
     internal class Program
     {
         
-        static void Ex1()
+        static void Main(string[] args)
         {
             NotificationService NotificationService = new NotificationService();
 
@@ -18,11 +18,6 @@
             NewNotificationService.SendNotification("abdallah@gmail.com", "Welcome to our Service", NewNotificationService.enNotificationType.Email);
             NewNotificationService.SendNotification("01096224620", "Your OTP code is 1234", NewNotificationService.enNotificationType.SMS);
             NewNotificationService.SendNotification("123-456-789", "Fax Message: Important Document", NewNotificationService.enNotificationType.Fax);
-        }
-
-        static void Main(string[] args)
-        {
-            Ex1();
         }
     }
 }
