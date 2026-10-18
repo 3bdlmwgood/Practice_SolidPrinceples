@@ -1,4 +1,5 @@
 ﻿using OCP.NotificationService;
+using SRP.Example_2;
 
 namespace OCP
 {
@@ -23,9 +24,23 @@ namespace OCP
             notificationWhatsapp.SendNotification("01096224620", "Hello Abdallah");
         }
 
+        static void LoggingService()
+        {
+            LoggingService_OCP loggingServiceDataBase = new LoggingService_OCP(new DatabaseLoggingService());
+            loggingServiceDataBase.Log("Error Occured Line 244");
+
+            LoggingService_OCP loggingServiceEventLog = new LoggingService_OCP(new EventLogLoggingService());
+            loggingServiceEventLog.Log("Error Occured Line 244");
+
+            LoggingService_OCP loggingServiceFile = new LoggingService_OCP(new FileLoggingService());
+            loggingServiceFile.Log("Error Occured Line 244");
+
+        }
+
         static void Main(string[] args)
         {
-            NotificationService();
+            //NotificationService();
+            LoggingService();
         }
     }
 }
