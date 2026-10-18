@@ -6,27 +6,16 @@ namespace OCP.PaymentService
 {
     public class PaymentService
     {
-        public enum enPaymentProcessor { PayPal,BankTransfer,Bitcoin,CreditCard}
-        
-        public void ProcessPayment(decimal Amount,enPaymentProcessor paymentProcessor)
-        {
-            if(paymentProcessor == enPaymentProcessor.PayPal)
-            {
-                PayPalPaymentProcessor.Process(Amount);
-            }
-            else if (paymentProcessor == enPaymentProcessor.BankTransfer)
-            {
-                BankTransferPaymentProcessor.Process(Amount);
-            }
-            else if (paymentProcessor == enPaymentProcessor.Bitcoin)
-            {
-                BitcoinPaymentProcessot.Process(Amount);
-            }
-            else if (paymentProcessor == enPaymentProcessor.CreditCard)
-            {
-                CreditCardPaymentProcessor.Process(Amount);
-            }
+        private IPaymentProcessor _paymentProcessor;
 
+        public PaymentService(IPaymentProcessor paymentProcessor)
+        {
+            _paymentProcessor = paymentProcessor;
+        }
+
+        public void ProcessPAyment(decimal Amount)
+        {
+            _paymentProcessor.Process(Amount);
         }
     }
 }

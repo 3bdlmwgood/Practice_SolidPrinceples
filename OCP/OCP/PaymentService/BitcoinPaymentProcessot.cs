@@ -4,9 +4,9 @@ using System.Text;
 
 namespace OCP.PaymentService
 {
-    public class BitcoinPaymentProcessot
+    public class BitcoinPaymentProcessot : IPaymentProcessor
     {
-        public static void Process(decimal Amount)
+        public void Process(decimal Amount)
         {
             Console.WriteLine($"Processing Bit Coin payment of {Amount}$");
         }

@@ -4,9 +4,9 @@ using System.Text;
 
 namespace OCP.PaymentService
 {
-    public class PayPalPaymentProcessor
+    public class PayPalPaymentProcessor : IPaymentProcessor
     {
-        public static void Process(decimal Amount)
+        public void Process(decimal Amount)
         {
             Console.WriteLine($"Processing PayPal payment of {Amount}$");
         }

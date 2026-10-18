@@ -4,9 +4,9 @@ using System.Text;
 
 namespace OCP.PaymentService
 {
-    public class CreditCardPaymentProcessor
+    public class CreditCardPaymentProcessor : IPaymentProcessor
     {
-        public static void Process(decimal Amount)
+        public void Process(decimal Amount)
         {
             Console.WriteLine($"Processing Credit Card payment of {Amount}$");
         }

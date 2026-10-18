@@ -40,11 +40,20 @@ namespace OCP
 
         static void PaymentServicce()
         {
-            PaymentService.PaymentService payment = new PaymentService.PaymentService();
-            payment.ProcessPayment(2502.5m, PaymentService.PaymentService.enPaymentProcessor.BankTransfer);
-            payment.ProcessPayment(2502.5m, PaymentService.PaymentService.enPaymentProcessor.PayPal);
-            payment.ProcessPayment(2502.5m, PaymentService.PaymentService.enPaymentProcessor.CreditCard);
-            payment.ProcessPayment(2502.5m, PaymentService.PaymentService.enPaymentProcessor.Bitcoin);
+            PaymentService.PaymentService paymentBank = new PaymentService.PaymentService(new BankTransferPaymentProcessor());
+            paymentBank.ProcessPAyment(2502.5m);
+
+            PaymentService.PaymentService paymentPayPal = new PaymentService.PaymentService(new PayPalPaymentProcessor());
+            paymentPayPal.ProcessPAyment(14502.554m);
+            
+            PaymentService.PaymentService paymentCreditCard = new PaymentService.PaymentService(new CreditCardPaymentProcessor());
+            paymentCreditCard.ProcessPAyment(29982.545m);
+            
+            PaymentService.PaymentService paymentBitCoin = new PaymentService.PaymentService(new BitcoinPaymentProcessot());
+            paymentBitCoin.ProcessPAyment(7952.7m);
+
+            PaymentService.PaymentService paymentVodafoneCash = new PaymentService.PaymentService(new VodafoneCashPaymentProcessor());
+            paymentVodafoneCash.ProcessPAyment(3252.94m);
         }
 
         static void Main(string[] args)
