@@ -6,10 +6,10 @@ namespace LSP
 {
     public class User : Person
     {
-        public override void PaySalary()
-        {
-            throw new InvalidOperationException("User dont's recieve a Salary.");
-        }
+        //public override void PaySalary()
+        //{
+        //    throw new InvalidOperationException("User dont's recieve a Salary.");
+        //}
 
         public override void SendEmail()
         {

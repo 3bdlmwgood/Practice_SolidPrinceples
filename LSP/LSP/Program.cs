@@ -25,20 +25,20 @@
 
             Console.WriteLine("---------------------------------");
 
-            Person person1 = new Employee();
+            Employee person1 = new Employee();
             person1.PaySalary();
             person1.SendEmail();
 
-            Person person2 = new Manager();
+            Manager person2 = new Manager();
             person2.PaySalary();
             person2.SendEmail();
 
-            Person person3 = new Student();
+            Student person3 = new Student();
             //person3.PaySalary();
             person3.SendEmail();
 
-            Person person4 = new User();
-            person4.PaySalary();
+            User person4 = new User();
+            //person4.PaySalary();
             person4.SendEmail();
         }
     }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LSP
 {
-    public class Manager : Person
+    public class Manager : Employee
     {
         public override void PaySalary()
         {

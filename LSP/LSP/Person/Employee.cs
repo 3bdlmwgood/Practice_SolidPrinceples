@@ -6,7 +6,7 @@ namespace LSP
 {
     public class Employee : Person
     {
-        public override void PaySalary()
+        public virtual void PaySalary()
         {
             Console.WriteLine("Paying Salary to Employee...");
         }
