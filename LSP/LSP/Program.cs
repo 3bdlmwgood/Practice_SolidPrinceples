@@ -15,12 +15,12 @@
 
             Console.WriteLine("---------------------------------");
 
-            Vehicle vehicle1 = new Car();
+            Car vehicle1 = new Car();
             vehicle1.StartEngine();
             vehicle1.Drive();
 
-            Vehicle vehicle2 = new Bicycle();
-            vehicle2.StartEngine();
+            Bicycle vehicle2 = new Bicycle();
+            //vehicle2.StartEngine();
             vehicle2.Drive();
 
         }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LSP
 {
-    public class Car : Vehicle
+    public class Car : MotorVehicle
     {
         public override void StartEngine()
         {

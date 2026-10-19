@@ -6,10 +6,10 @@ namespace LSP
 {
     public class Bicycle : Vehicle
     {
-        public override void StartEngine()
-        {
-            throw new NotSupportedException("Bicycles don't have Engine Started...");
-        }
+        //public override void StartEngine()
+        //{
+        //    throw new NotSupportedException("Bicycles don't have Engine Started...");
+        //}
 
         public override void Drive()
         {
