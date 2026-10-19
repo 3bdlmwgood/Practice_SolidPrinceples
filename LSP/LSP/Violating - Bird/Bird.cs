@@ -10,10 +10,5 @@ namespace LSP
         {
             Console.WriteLine("Eating...");
         }
-
-        public virtual void Fly()
-        {
-            Console.WriteLine("Flying...");
-        }
     }
 }

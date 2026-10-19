@@ -8,12 +8,12 @@ namespace LSP
     {
         public override void Eat()
         {
-            Console.WriteLine("Eagle Eating...");
+            Console.WriteLine("Ostriches Eating...");
         }
 
-        public override void Fly()
-        {
-            throw new NotSupportedException("Ostriches can't fly");
-        }
+        //public override void Fly()
+        //{
+        //    throw new NotSupportedException("Ostriches can't fly");
+        //}
     }
 }

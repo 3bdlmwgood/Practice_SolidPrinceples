@@ -6,7 +6,7 @@ using System.Text;
 
 namespace LSP
 {
-    public class Eagle : Bird
+    public class Eagle : FlyingBird
     {
         public override void Eat()
         {
