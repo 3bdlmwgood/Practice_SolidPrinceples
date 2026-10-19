@@ -12,6 +12,17 @@
             Ostrich bird2 = new Ostrich();
             bird2.Eat();
             //bird2.Fly();
+
+            Console.WriteLine("---------------------------------");
+
+            Vehicle vehicle1 = new Car();
+            vehicle1.StartEngine();
+            vehicle1.Drive();
+
+            Vehicle vehicle2 = new Bicycle();
+            vehicle2.StartEngine();
+            vehicle2.Drive();
+
         }
     }
 }
