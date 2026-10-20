@@ -4,6 +4,8 @@ using System.Text;
 
 namespace ISP.Payment
 {
+    
+    //Not Used yet
     public interface IPayment
     {
         void PayWithCreditCard();

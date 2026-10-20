@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ISP.Payment
 {
-    public class CreditCardPayment : IPayment
+    public class CreditCardPayment : ICreditCardPayment
     {
 
         public void PayWithCreditCard()
@@ -12,14 +12,14 @@ namespace ISP.Payment
             Console.WriteLine("Payment with Credit Card.");
         }
 
-        public void PayWithBitcoin()
-        {
-            throw new NotImplementedException();
-        }
+        //public void PayWithBitcoin()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public void PayWithPayPal()
-        {
-            throw new NotImplementedException();
-        }
+        //public void PayWithPayPal()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

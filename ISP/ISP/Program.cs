@@ -30,7 +30,13 @@ namespace ISP
             //PayPalPayment.PayWithCreditCard();
             //PayPalPayment.PayWithBitcoin();
 
+            BitCoinPayment BitCoinPayment = new BitCoinPayment();
+            BitCoinPayment.PayWithBitcoin();
 
+            AllPayments AllPayments = new AllPayments();
+            AllPayments.PayWithCreditCard();
+            AllPayments.PayWithPayPal();
+            AllPayments.PayWithBitcoin();
         }
     }
 }
