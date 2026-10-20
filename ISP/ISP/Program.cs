@@ -1,4 +1,5 @@
-﻿using ISP.Printer;
+﻿using ISP.Payment;
+using ISP.Printer;
 
 namespace ISP
 {
@@ -16,6 +17,18 @@ namespace ISP
             AdvancedPrinter.Scan();
             AdvancedPrinter.Fax();
             AdvancedPrinter.Copy();
+
+            Console.WriteLine("-----------------------------------");
+
+            CreditCardPayment CreditCardPayment = new CreditCardPayment();
+            CreditCardPayment.PayWithCreditCard();
+            //CreditCardPayment.PayWithPayPal();
+            //CreditCardPayment.PayWithBitcoin();
+            
+            PayPalPayment PayPalPayment = new PayPalPayment();
+            PayPalPayment.PayWithPayPal();
+            //PayPalPayment.PayWithCreditCard();
+            //PayPalPayment.PayWithBitcoin();
 
 
         }
