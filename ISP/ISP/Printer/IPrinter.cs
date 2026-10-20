@@ -4,6 +4,8 @@ using System.Text;
 
 namespace ISP.Printer
 {
+    
+    //Not Used Yet
     public interface IPrinter
     {
         void Print(string Content);

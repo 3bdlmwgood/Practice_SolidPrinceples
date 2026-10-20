@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ISP.Printer
 {
-    public class AdvancedPrinter : IPrinter
+    public class AdvancedPrinter : IPrint , IScan,IFax,ICopy
     {
         public void Print(string Content)
         {
@@ -19,6 +19,11 @@ namespace ISP.Printer
         public void Fax()
         {
             Console.WriteLine("Faxing...");
+        }
+
+        public void Copy()
+        {
+            Console.WriteLine("Copying...");
         }
     }
 }

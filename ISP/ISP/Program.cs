@@ -6,15 +6,16 @@ namespace ISP
     {
         static void Main(string[] args)
         {
-            IPrinter BasicPrinter = new BasicPrinter();
+            BasicPrinter BasicPrinter = new BasicPrinter();
             BasicPrinter.Print("Solid Princeples is very Intersting");
-            BasicPrinter.Scan();
-            BasicPrinter.Fax();
+            //BasicPrinter.Scan();
+            //BasicPrinter.Fax();
 
             AdvancedPrinter AdvancedPrinter = new AdvancedPrinter();
             AdvancedPrinter.Print("Solid Princeples is very Intersting");
             AdvancedPrinter.Scan();
             AdvancedPrinter.Fax();
+            AdvancedPrinter.Copy();
 
 
         }
