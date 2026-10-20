@@ -1,4 +1,5 @@
-﻿using ISP.Payment;
+﻿using ISP.Device;
+using ISP.Payment;
 using ISP.Printer;
 
 namespace ISP
@@ -37,6 +38,20 @@ namespace ISP
             AllPayments.PayWithCreditCard();
             AllPayments.PayWithPayPal();
             AllPayments.PayWithBitcoin();
+
+            Console.WriteLine("-----------------------------------");
+
+            SmartPhone SmartPhone = new SmartPhone();
+            SmartPhone.SendEmail();
+            SmartPhone.TakePhoto();
+            SmartPhone.MakeCall();
+            SmartPhone.UseGPS();
+
+            Computer Computer = new Computer();
+            Computer.SendEmail();
+            Computer.TakePhoto();
+            Computer.MakeCall();
+            Computer.UseGPS();
         }
     }
 }
