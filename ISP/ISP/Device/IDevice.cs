@@ -4,6 +4,7 @@ using System.Text;
 
 namespace ISP.Device
 {
+    //Not Used yet
     public interface IDevice
     {
         void MakeCall();

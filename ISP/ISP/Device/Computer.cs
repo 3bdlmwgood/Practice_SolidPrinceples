@@ -4,26 +4,26 @@ using System.Text;
 
 namespace ISP.Device
 {
-    internal class Computer : IDevice
+    internal class Computer : IEmailDevice
     {
-        public void MakeCall()
-        {
-            throw new NotImplementedException();
-        }
+        //public void MakeCall()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
         public void SendEmail()
         {
             Console.WriteLine("Sending Email.");
         }
 
-        public void TakePhoto()
-        {
-            throw new NotImplementedException();
-        }
+        //public void TakePhoto()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public void UseGPS()
-        {
-            throw new NotImplementedException();
-        }
+        //public void UseGPS()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

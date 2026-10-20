@@ -49,9 +49,16 @@ namespace ISP
 
             Computer Computer = new Computer();
             Computer.SendEmail();
-            Computer.TakePhoto();
-            Computer.MakeCall();
-            Computer.UseGPS();
+            //Computer.TakePhoto();
+            //Computer.MakeCall();
+            //Computer.UseGPS();
+
+            Camera Camera = new Camera();
+            Camera.TakePhoto();
+
+            AdvancedCamera AdvancedCamera= new AdvancedCamera();
+            AdvancedCamera.TakePhoto();
+            AdvancedCamera.SendEmail();
         }
     }
 }
