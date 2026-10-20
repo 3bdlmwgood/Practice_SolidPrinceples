@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ISP.Device
 {
-    public class SmartPhone : ICallDevice,IPhotoDevice,IGPSDevice,IEmailDevice
+    public class SmartPhone : ISmartPhone
     {
         public void MakeCall()
         {

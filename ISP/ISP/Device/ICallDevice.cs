@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ISP.Device
 {
-    internal interface ICallDevice
+    public interface ICallDevice
     {
         void MakeCall();
     }
