@@ -6,16 +6,16 @@ namespace DIP
 {
     public class ReportGenerator
     {
-        private PdfReportGenerator _pdfReportGenerator;
+        private IReportGenerator _ReportGenerator;
 
-        public ReportGenerator()
+        public ReportGenerator(IReportGenerator reportGenerator)
         {
-            _pdfReportGenerator = new PdfReportGenerator();
+            _ReportGenerator = reportGenerator;
         }
 
         public void GenerateReport()
         {
-            _pdfReportGenerator.Generate();
+            _ReportGenerator.Generate();
         }
     }
 }

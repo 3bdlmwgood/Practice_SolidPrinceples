@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DIP
 {
-    public class PdfReportGenerator
+    public class PdfReportGenerator : IReportGenerator
     {
         public void Generate()
         {
